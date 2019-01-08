@@ -1,0 +1,11 @@
+DROP TABLE  IF EXISTS links;
+
+CREATE TABLE links
+(
+  id INTEGER AUTO_INCREMENT PRIMARY KEY,
+  original  VARCHAR(255) NOT NULL,
+  link VARCHAR(255) NOT NULL,
+  count INTEGER DEFAULT 0 NOT NULL
+);
+CREATE UNIQUE INDEX link_unique_short ON links (link);
+
